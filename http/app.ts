@@ -3,13 +3,13 @@ const app = express();
 app.use(express.json())
 
 
-// import bookRoutes from '../http/routes/booksRoutes'
-// app.use('/api',bookRoutes);
+import bookRoutes from './routes/Books.Routes'
+app.use('/api',bookRoutes);
 
-import authorRoutes from '../http/routes/authorRoutes'
+import authorRoutes from './routes/Author.Routes'
 app.use('/api',authorRoutes);
 
-// import libraryRoutes from '../http/routes/libraryRoutes'
-// app.use('/api',libraryRoutes);
+import libraryRoutes from './routes/Library.Routes'
+app.use('/api',libraryRoutes);
 
 export default app;
